@@ -136,14 +136,18 @@ function DisplayAttraction() {
         </section>
       )}
       {listeAttraction.map((attraction) => (
-        <div key={attraction.id} onClick={() => afficherDetails(attraction)}>
-          <AfficheAttraction
-            nom={attraction.nom}
-            duree={attraction.attente}
-            id={attraction.id}
-            image={attraction.image}
-          />
-        </div>
+       <button
+       key={attraction.id}
+       className="btn-affiche-attraction"
+       onClick={() => afficherDetails(attraction)}
+     >
+       <AfficheAttraction
+         nom={attraction.nom}
+         duree={attraction.attente}
+         id={attraction.id}
+         image={attraction.image}
+       />
+     </button>
       ))}
     </div>
   );

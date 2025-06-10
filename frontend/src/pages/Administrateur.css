@@ -28,7 +28,6 @@
   .connexion
   {
     display: flex;
-    margin :unset;
     justify-content: center;
     margin : auto;
   }

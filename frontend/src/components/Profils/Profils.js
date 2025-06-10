@@ -56,7 +56,7 @@ function Profils() {
       {/* Edit form */}
       {change && (
         <>
-          <label>Edit Email Address</label>
+          <label htmlFor='mail'>Edit Email Address</label>
           <input 
             type='email' 
             id='mail' 

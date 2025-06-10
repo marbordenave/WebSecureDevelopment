@@ -103,13 +103,14 @@ function ModificationAttraction({ token }) {
         </td>
         <td>{attraction.nom}</td>
         <td>
-          <span
+        <button
+            type="button"
             className="description-preview"
             onClick={(e) => toggleDescription(e.target)}
-          >
+         >
             {attraction.description.split(" ").slice(0, 5).join(" ")}
             <span className="expand-trigger"> See more</span>
-          </span>
+          </button>
           <span className="description-full">{attraction.description}</span>
         </td>
         <td>{attraction.duree}</td>
