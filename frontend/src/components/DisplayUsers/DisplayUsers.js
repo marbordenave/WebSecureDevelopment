@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getUsers, deleteUsers, updateUsersAdmin } from "../../services/api";
+import { getUsers, deleteUsers } from "../../services/api";
 
 function DisplayUsers({ token }) {
   const [listeUsers, setListeUsers] = useState([]);
@@ -30,19 +30,7 @@ function DisplayUsers({ token }) {
 
 
   const closePopupDelete = () => {
-    setPopupDeleteId(""); /
-  };
-
-  const handleAdmin = (userId, userAdmin) => {
-    if (!userAdmin) {
-      updateUsersAdmin(token, userId)
-        .then(() => {
-          fetchUser();
-        })
-        .catch((error) => {
-          console.error("Erreur lors de la mise à jour de l'admin :", error);
-        });
-    }
+    setPopupDeleteId(""); 
   };
 
 

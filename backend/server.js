@@ -67,13 +67,13 @@ app.use(
 app.use(bodyParser.json());
 
 // 5. Check API key except on certain routes
-// const checkApiKey = (req, res, next) => {
-//   const key = req.headers["x-api-key"];
-//   if (key !== process.env.API_KEY) {
-//     return res.status(403).json({ error: "Invalid API key" });
-//   }
-//   next();
-// };
+const checkApiKey = (req, res, next) => {
+   const key = req.headers["x-api-key"];
+   if (key !== process.env.API_KEY) {
+    return res.status(403).json({ error: "Invalid API key" });
+ }
+  next();
+ };
 
 app.use((req, res, next) => {
   if (["/login", "/register", "/me"].includes(req.path)) return next();
