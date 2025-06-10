@@ -1,6 +1,5 @@
 .sommaire {
     list-style-type: none; 
-    padding-left: 0; 
     padding: 4%;
     width: 40%;
     margin:auto;
@@ -193,10 +192,6 @@
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.admin-card {
-    animation: fadeIn 0.5s ease-out forwards;
 }
 
 .admin-card:nth-child(1) { animation-delay: 0.1s; }
